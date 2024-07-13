@@ -4,18 +4,18 @@
     Apply
 </div>
 
-<form method="post" action="/course/apply">
+<form method="post" asp-action="Apply">
     <div class="form-group my-2">
-        <label>Email</label>
-        <input name="Email" class="form-control">
+        <label asp-for="Email">E-Mail</label>
+        <input asp-asp-for="Email" class="form-control">
     </div>
     <div class="form-group my-2">
-        <label>First Name</label>
-        <input name="FirstName" class="form-control">
+        <label asp-for="FirstName"></label>
+        <input asp-for="FirstName" class="form-control">
     </div>
     <div class="form-group my-2">
-        <label>Last Name</label>
-        <input name="LastName" class="form-control">
+        <label asp-for="LastName"></label>
+        <input asp-for="LastName" class="form-control">
     </div>
     <div class="form-group my-2">
         <label>Age</label>
@@ -31,20 +31,20 @@
     <fieldset>
         <legend>Select One Course</legend>
         <p>
-            <input id="mvc" type="radio" name="SelectedCourse" value="ASP.NET Core MVC" />
+            <input id="mvc" type="radio" asp-for="SelectedCourse" value="ASP.NET Core MVC" />
             <label for="mvc">ASP.NET Core MVC</label>
         </p>
         <p>
-            <input id="api" type="radio" name="SelectedCourse" value="ASP.NET Core WEB API" />
+            <input id="api" type="radio" asp-for="SelectedCourse" value="ASP.NET Core WEB API" />
             <label for="api">ASP.NET Core WEB API</label>
         </p>
         <p>
-            <input id="ang" type="radio" name="SelectedCourse" value="Angular" />
+            <input id="ang" type="radio" asp-for="SelectedCourse" value="Angular" />
             <label for="ang">Angular</label>
         </p>
     </fieldset>
     <div>
         <button class="btn btn-primary" type="submit">Apply</button>
-        <a class="btn btn-warning" href="/">Home</a>
+        <a class="btn btn-warning" asp-controller="Home" asp-action="Index">Home</a>
     </div>
 </form>
